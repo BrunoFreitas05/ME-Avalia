@@ -15,7 +15,6 @@
       align-items: center;
       gap: 14px;
     }
-    header img { width: 48px; height: 48px; border-radius: 10px; background: #fff; padding: 4px; }
     header h1 { color: #fff; font-size: 20px; font-weight: 700; }
     header p  { color: rgba(255,255,255,0.7); font-size: 13px; }
 
@@ -55,7 +54,19 @@
       line-height: 1.65;
     }
 
+    .warn {
+      background: #FFF6DD;
+      border-left: 4px solid #F5C518;
+      border-radius: 0 8px 8px 0;
+      padding: 12px 16px;
+      margin: 14px 0;
+      font-size: 14px;
+      color: #8A6D00;
+      line-height: 1.65;
+    }
+
     .date { font-size: 13px; color: #7aa0c4; margin-top: 6px; }
+    code { background: #E8F0FE; color: #00529e; padding: 1px 6px; border-radius: 4px; font-size: 13px; }
 
     footer {
       background: #00529e;
@@ -86,42 +97,73 @@
   </div>
 
   <div class="card">
-    <h2>2. Dados Acessados pela Extensão</h2>
-    <p>Durante o uso, a extensão acessa as seguintes informações:</p>
+    <h2>2. Dados Coletados pela Extensão</h2>
+    <p>Durante o uso, a extensão coleta e utiliza as seguintes informações:</p>
     <ul>
-      <li><strong>Token de autenticação do Octadesk:</strong> capturado automaticamente a partir dos cabeçalhos das requisições feitas pelo navegador ao acessar o Octadesk. Utilizado exclusivamente para autenticar as chamadas à API do Octadesk.</li>
-      <li><strong>Tickets selecionados na lista:</strong> números e identificadores dos tickets que o agente seleciona manualmente na interface do Octadesk antes de acionar a extensão.</li>
-      <li><strong>Mensagem pública:</strong> texto digitado pelo agente no editor da extensão, salvo localmente para facilitar o reuso em sessões futuras.</li>
-      <li><strong>Progresso da sessão de envio:</strong> dados temporários sobre o andamento do envio (tickets processados, erros, tempo decorrido), utilizados para exibir o relatório ao final.</li>
+      <li>
+        <strong>Nome e e-mail da conta Google do agente:</strong> obtidos via a API <code>chrome.identity</code> do navegador, com a finalidade exclusiva de identificar o colaborador nos relatórios de uso interno da equipe. Nenhuma senha ou dado de autenticação Google é acessado.
+      </li>
+      <li>
+        <strong>Token de autenticação do Octadesk:</strong> capturado automaticamente a partir dos cabeçalhos das requisições feitas pelo navegador ao acessar o Octadesk. Utilizado exclusivamente para autenticar as chamadas à API do Octadesk durante a sessão.
+      </li>
+      <li>
+        <strong>Tickets selecionados na lista:</strong> números e identificadores dos tickets que o agente seleciona manualmente na interface do Octadesk antes de acionar a extensão.
+      </li>
+      <li>
+        <strong>Mensagem pública:</strong> texto digitado pelo agente no editor da extensão, salvo localmente para facilitar o reuso em sessões futuras.
+      </li>
+      <li>
+        <strong>Dados de uso por sessão:</strong> ao final de cada sessão, são registrados: data, hora, tickets processados, pesquisas enviadas, tickets que atingiram o limite de 3 envios e erros ocorridos. Esses dados são enviados para uma planilha interna de controle da equipe.
+      </li>
     </ul>
+
+    <div class="warn">
+      <strong>Informação de identificação pessoal:</strong> a extensão coleta nome e e-mail da conta Google do agente para fins de identificação nos relatórios internos de uso da ferramenta.
+    </div>
   </div>
 
   <div class="card">
     <h2>3. Como os Dados São Armazenados</h2>
     <div class="highlight">
-      Todos os dados são armazenados exclusivamente no dispositivo do próprio usuário, utilizando a API <code>chrome.storage.local</code> do navegador Google Chrome. Nenhuma informação é transmitida para servidores externos ou de terceiros.
+      Os dados de sessão (nome, e-mail, métricas de uso) são enviados ao final de cada execução para uma planilha Google Sheets de uso interno da Melhor Envio, acessível apenas pelo administrador da extensão. Os demais dados (mensagem salva, token, progresso) ficam armazenados exclusivamente no dispositivo do usuário via <code>chrome.storage.local</code>.
     </div>
-    <p>O token de autenticação é armazenado temporariamente por até 4 horas e descartado automaticamente após esse período. Os demais dados (mensagem salva e progresso) permanecem no armazenamento local do Chrome até que o usuário os limpe manualmente ou desinstale a extensão.</p>
+    <p>O token de autenticação do Octadesk é armazenado temporariamente por até 4 horas e descartado automaticamente após esse período. A mensagem salva e o progresso de sessão permanecem no armazenamento local até que o usuário os limpe ou desinstale a extensão.</p>
   </div>
 
   <div class="card">
-    <h2>4. Compartilhamento de Dados</h2>
-    <p>A extensão <strong>não compartilha, vende, transmite nem envia</strong> nenhum dado do usuário para terceiros, servidores externos ou qualquer outro destino que não seja a própria API oficial do Octadesk (<code>*.prod.octadesk.services</code>), que é a plataforma já utilizada pelo agente em seu trabalho diário.</p>
+    <h2>4. Finalidade dos Dados Coletados</h2>
+    <ul>
+      <li><strong>Nome e e-mail Google:</strong> identificar o agente nos relatórios internos de uso da ferramenta — quantidade de sessões, pesquisas enviadas, erros, etc.</li>
+      <li><strong>Token Octadesk:</strong> autenticar as chamadas à API do Octadesk para envio de mensagens e pesquisas de satisfação.</li>
+      <li><strong>Dados de sessão:</strong> gerar relatórios internos de uso para gestão da equipe de suporte.</li>
+    </ul>
+    <p>Nenhum dado é utilizado para fins publicitários, de marketing ou compartilhado com terceiros fora do ambiente interno da Melhor Envio.</p>
   </div>
 
   <div class="card">
-    <h2>5. Domínios Acessados</h2>
-    <p>A extensão opera exclusivamente nos seguintes domínios:</p>
+    <h2>5. Compartilhamento de Dados</h2>
+    <p>Os dados coletados são utilizados exclusivamente para uso interno da Melhor Envio. A extensão <strong>não vende, não transfere e não compartilha</strong> nenhuma informação com terceiros fora dos seguintes destinos:</p>
+    <ul>
+      <li><strong>API do Octadesk</strong> (<code>*.prod.octadesk.services</code>) — para envio de mensagens e pesquisas de satisfação, que é a função principal da extensão.</li>
+      <li><strong>Planilha interna Google Sheets</strong> — para registro dos dados de uso por sessão, acessível apenas pelo administrador da equipe.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>6. Domínios Acessados</h2>
     <ul>
       <li><strong>app.octadesk.com</strong> — interface web do Octadesk, onde a extensão lê os tickets selecionados pelo agente.</li>
       <li><strong>*.prod.octadesk.services</strong> — API oficial do Octadesk, utilizada para enviar mensagens e pesquisas de satisfação.</li>
+      <li><strong>brunofreitas05.github.io</strong> — configurações remotas da extensão (mensagem padrão e flag de edição).</li>
+      <li><strong>script.google.com / script.googleusercontent.com</strong> — envio dos dados de uso da sessão para a planilha interna.</li>
     </ul>
     <p>Nenhum outro site ou serviço é acessado pela extensão.</p>
   </div>
 
   <div class="card">
-    <h2>6. Permissões Utilizadas</h2>
+    <h2>7. Permissões Utilizadas</h2>
     <ul>
+      <li><strong>identity:</strong> para obter o nome e e-mail da conta Google do agente, usados nos relatórios internos de uso.</li>
       <li><strong>storage:</strong> para salvar a mensagem e o progresso da sessão localmente no dispositivo.</li>
       <li><strong>notifications:</strong> para exibir uma notificação ao final de cada sessão de envio.</li>
       <li><strong>webRequest:</strong> para capturar o token de autenticação dos cabeçalhos das requisições ao Octadesk.</li>
@@ -133,12 +175,12 @@
   </div>
 
   <div class="card">
-    <h2>7. Uso por Menores</h2>
+    <h2>8. Uso por Menores</h2>
     <p>Esta extensão é destinada exclusivamente ao uso profissional por agentes de suporte da Melhor Envio. Não é direcionada nem adequada para uso por menores de idade.</p>
   </div>
 
   <div class="card">
-    <h2>8. Contato</h2>
+    <h2>9. Contato</h2>
     <p>Em caso de dúvidas sobre esta Política de Privacidade ou sobre o funcionamento da extensão, entre em contato com o desenvolvedor:</p>
     <p><strong>Bruno Marques Freitas</strong><br>Melhor Envio — Equipe de Suporte ao Cliente</p>
   </div>
