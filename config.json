@@ -1,16 +1,6 @@
 {
-  "versao": 6,
+  "versao": 7,
   "edicao_habilitada": true,
   "mensagem": "<p>...</p>",
-  "empresas": {
-    "melhor_envio": {
-      "nome": "Melhor Envio",
-      "dominios": [
-        "melhorenvio.com.br"
-      ],
-      "edicao_padrao": false,
-      "mensagem_padrao": "<p>teste</p>",
-      "departamentos": {}
-    }
-  }
+  "empresas": {}
 }
