@@ -1,5 +1,5 @@
 {
-  "versao": 8,
+  "versao": 9,
   "edicao_habilitada": true,
   "mensagem": "<p>...</p>",
   "empresas": {
@@ -8,7 +8,16 @@
       "dominios": [],
       "edicao_padrao": false,
       "mensagem_padrao": "<p>teste</p>",
-      "departamentos": {}
+      "departamentos": {
+        "atendimento_n1": {
+          "nome": "Atendimento N1",
+          "edicao_habilitada": true,
+          "mensagem": "<p>teste</p>",
+          "usuarios": [
+            "bruno.freitas@melhorenvio.com"
+          ]
+        }
+      }
     }
   }
 }
