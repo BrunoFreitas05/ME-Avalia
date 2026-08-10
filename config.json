@@ -1,6 +1,6 @@
 {
-  "versao": 14,
-  "edicao_habilitada": true,
+  "versao": 15,
+  "edicao_habilitada": false,
   "mensagem": "<p>teste</p>",
   "empresas": {
     "melhor_envio": {
