@@ -1,5 +1,16 @@
 {
-  "versao": 7,
+  "versao": 3,
   "edicao_habilitada": false,
-  "mensagem": "<p style=\"margin:0 !important;padding:0 !important;\">Olá! Espero que se encontre bem!</p><p style=\"margin:0 !important;padding:0 !important;\">Poderia dar uma forcinha e avaliar meu atendimento, por gentileza? É muito importante para o meu trabalho e desenvolvimento.</p><p style=\"margin:0 !important;padding:0 !important;\">É só indicar como foi a sua experiência comigo e, se possível, deixar um comentário! 😊</p><p style=\"margin:0 !important;padding:0 !important;\">Lembrando que a avaliação é referente ao meu atendimento, e não às funcionalidades da plataforma. O Melhor Envio atua como intermediador logístico, e o meu atendimento é voltado exclusivamente a te auxiliar da melhor forma possível nas tratativas com as transportadoras.</p><p style=\"margin:0 !important;padding:0 !important;\">Espero te encontrar novamente em outros atendimentos!</p><p style=\"margin:0 !important;padding:0 !important;\">Agradeço desde já pela sua colaboração 💙</p>"
+  "mensagem": "<p style=\"margin:0 !important;padding:0 !important;\">OlÃ¡! Espero que se encontre bem!</p><p style=\"margin:0 !important;padding:0 !important;\">Poderia dar uma forcinha e avaliar meu atendimento, por gentileza? Ã muito importante para o meu trabalho e desenvolvimento.</p><p style=\"margin:0 !important;padding:0 !important;\">Ã sÃ³ indicar como foi a sua experiÃªncia comigo e, se possÃ­vel, deixar um comentÃ¡rio! ð</p><p style=\"margin:0 !important;padding:0 !important;\">Lembrando que a avaliaÃ§Ã£o Ã© referente ao meu atendimento, e nÃ£o Ã s funcionalidades da plataforma. O Melhor Envio atua como intermediador logÃ­stico, e o meu atendimento Ã© voltado exclusivamente a te auxiliar da melhor forma possÃ­vel nas tratativas com as transportadoras.</p><p style=\"margin:0 !important;padding:0 !important;\">Espero te encontrar novamente em outros atendimentos!</p><p style=\"margin:0 !important;padding:0 !important;\">AgradeÃ§o desde jÃ¡ pela sua colaboraÃ§Ã£o ð</p>",
+  "empresas": {
+    "melhor_envio": {
+      "nome": "Melhor Envio",
+      "dominios": [
+        "melhorenvio.com"
+      ],
+      "edicao_padrao": false,
+      "mensagem_padrao": "<p>Olá! Espero que se encontre bem!</p><p></p><p>Poderia dar uma forcinha e avaliar meu atendimento, por gentileza? É muito importante para o meu trabalho e desenvolvimento.</p><p></p><p>É só indicar como foi a sua experiência comigo e, se possível, deixar um comentário! 😊</p><p></p><p>Lembrando que a avaliação é referente ao meu atendimento, e não às funcionalidades da plataforma. O Melhor Envio atua como intermediador logístico, e o meu atendimento é voltado exclusivamente a te auxiliar da melhor forma possível nas tratativas com as transportadoras.</p><p></p><p>Espero te encontrar novamente em outros atendimentos!</p><p></p><p>Agradeço desde já pela sua colaboração 💙</p>",
+      "departamentos": {}
+    }
+  }
 }
