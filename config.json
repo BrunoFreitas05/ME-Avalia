@@ -1,5 +1,5 @@
 {
-  "versao": 17,
+  "versao": 18,
   "edicao_habilitada": false,
   "mensagem": "<p>teste</p>",
   "empresas": {
@@ -9,7 +9,7 @@
         "melhorenvio.com.br",
         "melhorenvio.com"
       ],
-      "edicao_padrao": true,
+      "edicao_padrao": false,
       "mensagem_padrao": "<p>teste</p>",
       "departamentos": {
         "atendimento_n1": {
