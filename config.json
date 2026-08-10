@@ -1,7 +1,7 @@
 {
   "versao": 14,
   "edicao_habilitada": true,
-  "mensagem": "<p>...</p>",
+  "mensagem": "<p>teste</p>",
   "empresas": {
     "melhor_envio": {
       "nome": "Melhor Envio",
