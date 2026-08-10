@@ -1,24 +1,19 @@
 {
-  "versao": 18,
-  "edicao_habilitada": false,
+  "versao": 19,
+  "edicao_habilitada": true,
   "mensagem": "<p>teste</p>",
   "empresas": {
     "melhor_envio": {
       "nome": "Melhor Envio",
-      "dominios": [
-        "melhorenvio.com.br",
-        "melhorenvio.com"
-      ],
-      "edicao_padrao": false,
+      "dominios": ["melhorenvio.com.br", "melhorenvio.com"],
+      "edicao_padrao": true,
       "mensagem_padrao": "<p>teste</p>",
       "departamentos": {
         "atendimento_n1": {
           "nome": "Atendimento N1",
           "edicao_habilitada": true,
           "mensagem": "<p>teste</p>",
-          "usuarios": [
-            "bruno.freitas@melhorenvio.com"
-          ]
+          "usuarios": ["bruno.freitas@melhorenvio.com"]
         }
       }
     }
