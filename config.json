@@ -1,26 +1,5 @@
 {
-  "versao": 20,
-  "edicao_habilitada": true,
-  "mensagem": "<p>teste</p>",
-  "empresas": {
-    "melhor_envio": {
-      "nome": "Melhor Envio",
-      "dominios": [
-        "melhorenvio.com.br",
-        "melhorenvio.com"
-      ],
-      "edicao_padrao": true,
-      "mensagem_padrao": "<p>teste</p>",
-      "departamentos": {
-        "atendimento_n1": {
-          "nome": "Atendimento N1",
-          "edicao_habilitada": false,
-          "mensagem": "<p>teste</p>",
-          "usuarios": [
-            "bruno.freitas@melhorenvio.com"
-          ]
-        }
-      }
-    }
-  }
+  "versao": 1,
+  "edicao_habilitada": false,
+  "mensagem": "<p style=\"margin:0 !important;padding:0 !important;\">Olá! Espero que se encontre bem!</p><p style=\"margin:0 !important;padding:0 !important;\">Poderia dar uma forcinha e avaliar meu atendimento, por gentileza? É muito importante para o meu trabalho e desenvolvimento.</p><p style=\"margin:0 !important;padding:0 !important;\">É só indicar como foi a sua experiência comigo e, se possível, deixar um comentário! 😊</p><p style=\"margin:0 !important;padding:0 !important;\">Lembrando que a avaliação é referente ao meu atendimento, e não às funcionalidades da plataforma. O Melhor Envio atua como intermediador logístico, e o meu atendimento é voltado exclusivamente a te auxiliar da melhor forma possível nas tratativas com as transportadoras.</p><p style=\"margin:0 !important;padding:0 !important;\">Espero te encontrar novamente em outros atendimentos!</p><p style=\"margin:0 !important;padding:0 !important;\">Agradeço desde já pela sua colaboração 💙</p>"
 }
