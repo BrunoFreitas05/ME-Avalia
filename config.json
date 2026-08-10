@@ -1,5 +1,5 @@
 {
-  "versao": 16,
+  "versao": 17,
   "edicao_habilitada": false,
   "mensagem": "<p>teste</p>",
   "empresas": {
@@ -14,7 +14,7 @@
       "departamentos": {
         "atendimento_n1": {
           "nome": "Atendimento N1",
-          "edicao_habilitada": false,
+          "edicao_habilitada": true,
           "mensagem": "<p>teste</p>",
           "usuarios": [
             "bruno.freitas@melhorenvio.com"
